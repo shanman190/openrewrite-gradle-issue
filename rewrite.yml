@@ -1,0 +1,9 @@
+type: specs.openrewrite.org/v1beta/recipe
+name: com.example.VersionRelocation
+displayName: Version Relocation
+description: Relocates dependencies from version A to version B
+recipeList:
+  - org.openrewrite.gradle.ChangeDependencyVersion:
+      dependencyPattern: org.springframework.boot:spring-boot-starter-web
+      newVersion: "2.4.13"
+      configuration: compile
